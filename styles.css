@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-top: 125px;
+    padding-top: 150px;
 }
 
 .navbar {
@@ -20,13 +20,13 @@ body {
 }
 
 .left-section {
-    padding-left: 75px;
+    padding-left: 175px;
     display: flex;
     align-items: center;
 }
 
 .left-section a {
-    color: #333;
+    color: black;
     text-decoration: none;
     padding: 14px 16px;
 }
@@ -49,11 +49,21 @@ body {
     justify-content: space-around;
 }
 
+a
+{
+    text-decoration: none
+}
 .product {
-    width: calc(25% - 20px);
+    width: calc(25% - 10px);
     box-sizing: border-box;
-    padding: 10px;
-    margin: 10px;
+    padding: 2px;
+    margin: 2px;
+}
+
+.product a
+{
+    color: black;
+    text-decoration: none;
 }
 
 .product img {
@@ -64,10 +74,74 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.container {
+    display: flex;
+    width: 900px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-image
+{
+    max-width: 600px;
+}
+
+.image-slider {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-item {
+    display: none;
+}
+
+.slider-item.active {
+    display: block;
+}
+
+.product-details {
+    flex: 1;
+    width: : 300px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+h2, p {
+    margin: 0;
+}
+
+img {
+    width: 425px;
+    height: auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
 /* Media query for mobile design */
 @media screen and (max-width: 600px) {
     body {
-        padding-top: 175px;
+        padding-top: 100px;
     }
 
     .navbar {
@@ -95,6 +169,12 @@ body {
         margin-top: 15px;
     }
 
+    .logo
+    {
+        width: 75px;
+        border-radius: 50%;
+    }
+
     .product-container {
         display: flex;
         flex-wrap: wrap;
@@ -111,7 +191,50 @@ body {
     .product img {
         width: 100%;
         height: auto;
-        border-radius: 1px solid #ddd;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) 
+{
+    body
+    {
+        padding-top: 125px;
+    }
+
+    .left-section
+    {
+        display: none;
+    }
+
+    .logo
+    {
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .product-container 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product
+    {
+        width: calc(50% - 20px);
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .product img 
+    {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
