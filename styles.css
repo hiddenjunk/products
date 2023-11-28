@@ -51,8 +51,9 @@ body {
 
 a
 {
-    text-decoration: none
+    text-decoration: none;
 }
+
 .product {
     width: calc(25% - 10px);
     box-sizing: border-box;
