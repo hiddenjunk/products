@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUF Moons Tee</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 600px) 
+        {
+            body {
+                padding: 25px;
+                padding-top: 225px;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 900px) 
+        {
+            body {
+                padding: 75px;
+                padding-top: 300px;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+    <div class="navbar" id="navbar">
+        <div class="left-section">
+            <a href="product.html">Shop</a>
+            <a href="#">Finds</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="center-section">
+            <a href="product.html"><img src="logo.jpg" alt="Hidden Junk Logo" class="logo"></a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="image-slider">
+            
+            <div class="slider-item active">
+                <img src="HUF Tee.jpg" alt="HUF Front Tee">
+            </div>
+
+            <div class="slider-item">
+                <img src="HUF Back Tee.jpg" alt="HUF Back Tee">
+            </div>
+
+            <div class="slider-item">
+                <img src="Front .jpg" alt="HUF Front Design">
+            </div>
+
+            <div class="slider-item">
+                <img src="Back.jpg" alt="HUF Back Design">
+            </div>
+
+            <div class="arrow arrow-left" onclick="prevSlide()">&#9665;</div>
+            <div class="arrow arrow-right" onclick="nextSlide()">&#9655;</div>
+
+        </div>
+
+        <div class="product-details" data-product-id="huf-moons-tee" data-product-name="HUF Moons Tee">
+
+            <h2>HUF Moons Tee</h2>
+            <h3>350.00</h3>
+            <h3>Available</h3>
+            <p><b>Product Details</b></p> 
+
+            <ul>
+                <li><b>Size:</b> Small</li>
+                <li><b>Dimension:</b> W18 x L26</li>
+                <li><b>Condition:</b> 9/10<br><br></li>
+            </ul>
+
+            <button id="messageSellerBtn" onclick="messageSeller()">Message Seller</button>
+
+            <p style="padding-top: 20px;"><b>Note: </b>Send the link to seller to Inquire.</p> 
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
