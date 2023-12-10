@@ -1,17 +1,13 @@
-/*var currentSlide = 1;
-
-window.addEventListener('scroll', function () {
-    var navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = '#fff'; // Change to your desired background color
-    } else {
-        navbar.style.backgroundColor = 'transparent';
-    }
-});*/
-
 let currentIndex = 0;
 const totalSlides = document.querySelectorAll('.slider-item').length;
 
+function messageSeller() {
+	var productId = document.querySelector('.product-details').getAttribute('data-product-id');
+
+	var messengerLink = "https://www.messenger.com/t/100040491547762";
+
+	window.open(messengerLink, '_blank');
+}
 function showSlide(index) {
     const sliderItems = document.querySelectorAll('.slider-item');
 
