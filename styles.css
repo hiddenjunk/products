@@ -51,9 +51,8 @@ body {
 
 a
 {
-    text-decoration: none;
+    text-decoration: none
 }
-
 .product {
     width: calc(25% - 10px);
     box-sizing: border-box;
@@ -96,10 +95,14 @@ a
 
 .slider-item {
     display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .slider-item.active {
     display: block;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .product-details {
@@ -107,6 +110,27 @@ a
     width: : 300px;
     padding-top: 50px;
     padding-left: 50px;
+}
+
+#messageSellerBtn
+{
+    border: none;
+    padding: 16px 32px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 4px solid gray;
+}
+
+#messageSellerBtn:hover {
+    background-color: gray;
+    color: white;
 }
 
 h2, p {
@@ -141,10 +165,6 @@ img {
 
 /* Media query for mobile design */
 @media screen and (max-width: 600px) {
-    body {
-        padding-top: 100px;
-    }
-
     .navbar {
         flex-direction: column;
         height: 160px;
@@ -196,14 +216,37 @@ img {
         border-radius: 5px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
+
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .slider-item img, .slider-item.active img
+    {
+        width: 100%;
+    }
+
+    .product-image
+    {
+        max-width: 100%;
+    }
+
+    .product-details
+    {
+        width: 100%;
+        padding: 20px;
+    }
+
+    
 }
 
-@media screen and (min-width: 601px) and (max-width: 1024px) 
+@media screen and (min-width: 601px) and (max-width: 900px) 
 {
-    body
-    {
-        padding-top: 125px;
-    }
 
     .left-section
     {
@@ -238,5 +281,30 @@ img {
         border: 1px solid #ddd;
         border-radius: 5px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .slider-item img, .slider-item.active img
+    {
+        width: 100%;
+    }
+
+    .product-image
+    {
+        max-width: 100%;
+    }
+
+    .product-details
+    {
+        width: 100%;
+        padding: 20px;
     }
 }
